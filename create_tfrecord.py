@@ -1,5 +1,6 @@
 import random
 import tensorflow as tf
+import sys
 from dataset_utils import _dataset_exists, _get_filenames_and_classes, write_label_file, _convert_dataset
 
 #====================================================DEFINE YOUR ARGUMENTS=======================================================================
@@ -21,6 +22,7 @@ flags.DEFINE_integer('random_seed', 0, 'Int: Random seed to use for repeatabilit
 flags.DEFINE_string('tfrecord_filename', None, 'String: The output filename to name your TFRecord file')
 
 FLAGS = flags.FLAGS
+FLAGS(sys.argv)
 
 def main():
 
